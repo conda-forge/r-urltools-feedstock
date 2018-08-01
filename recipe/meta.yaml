@@ -15,7 +15,8 @@ source:
   sha256: b4272fce4de28c6abb15ff6c192a889cf99d96a777fcb19de712b94c2429bb4f
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   script: R CMD INSTALL --build .
   skip: True  # [win32]
   rpaths:
@@ -24,18 +25,20 @@ build:
 
 requirements:
   build:
+    - posix  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+  host:
     - r-base
     - r-rcpp
     - r-triebeard
-    - posix  # [win]
-    - {{native}}toolchain  # [win]
-    - gcc  # [not win]
 
   run:
     - r-base
     - r-rcpp
     - r-triebeard
-    - libgcc  # [not win]
 
 test:
   commands:
