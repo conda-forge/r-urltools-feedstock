@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/urltools_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/urltools/urltools_{{ version }}.tar.gz
-  sha256: 4485f81ca14199e0c66ba477019253b0e7fe414e8ab6ada3f02cfe5a26770306
+  sha256: 958b03067a2cc4888dd5220497b8a4f47f7f9344be1339305a04142a9c3197a2
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
   script: R CMD INSTALL --build .
   skip: True  # [win32]
   rpaths:
