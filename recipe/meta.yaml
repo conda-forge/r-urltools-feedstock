@@ -15,7 +15,6 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 2
-  script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
     - lib/
