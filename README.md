@@ -3,6 +3,19 @@ About r-urltools-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-urltools-feedstock/blob/main/LICENSE.txt)
 
+
+About r-urltools
+----------------
+
+Home: https://github.com/Ironholds/urltools/
+
+Package license: MIT
+
+Summary: A toolkit for all URL-handling needs, including encoding and decoding, parsing, parameter extraction and modification. All functions are designed to be both fast and entirely vectorised. It is intended to be useful for people dealing with web-related datasets, such as server-side logs, although may be useful for other situations involving large sets of URLs.
+
+About r-urltools
+----------------
+
 Home: https://github.com/Ironholds/urltools/
 
 Package license: MIT
