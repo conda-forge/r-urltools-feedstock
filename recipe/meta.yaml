@@ -50,9 +50,12 @@ test:
 about:
   home: https://github.com/Ironholds/urltools/
   license: MIT
-  license_file: LICENSE
   summary: A toolkit for all URL-handling needs, including encoding and decoding, parsing, parameter extraction and modification. All functions are designed to be both fast and entirely vectorised. It is intended to be useful for people dealing with web-related datasets, such as server-side logs, although may be useful for
     other situations involving large sets of URLs.
+  license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
